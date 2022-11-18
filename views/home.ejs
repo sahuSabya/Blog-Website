@@ -3,10 +3,10 @@
 <h1>Home</h1>
 <p><%= homeStartingContent %></p>
 <% posts.forEach((post) => { %>
-  <h1><%= post.composeTitle %></h1>
-  <p>
-    <%= post.composePost.substring(0, 100) + "..." %>
-    <a href="/posts/<%= post.composeTitle %>">Read More</a>
+<h1><%= post.title %></h1>
+<p>
+  <%= post.content.substring(0, 100) + "..." %>
+  <a href="/posts/<%=post._id%>">Read More</a>
   </p>
 
 <% }); %>
